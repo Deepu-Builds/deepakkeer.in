@@ -44,7 +44,7 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/Deepu-Builds",
+    link: "https://github.com/Deepak-Keer",
     essential: true,
   },
   {
@@ -93,7 +93,6 @@ const home: Home = {
     ),
     href: "/work/pagepulse",
   },
-
 
   subline: (
     <>

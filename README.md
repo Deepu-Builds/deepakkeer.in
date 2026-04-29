@@ -65,7 +65,7 @@ Deployed on **Vercel** with a custom domain.
 
 ## 📬 Contact
 
-- GitHub: https://github.com/Deepu-Builds  
+- GitHub: https://github.com/Deepak-Keer  
 - Portfolio: https://deepakkeer.in  
 - Email: deepakkeer.dev@gmail.com
 
