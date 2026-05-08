@@ -91,7 +91,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/personal-brand-os",
+    href: "/work/a-personal-brand-os",
   },
 
   subline: (
