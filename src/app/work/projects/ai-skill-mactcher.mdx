@@ -1,0 +1,97 @@
+---
+title: "AI Skill Matcher – Full-Stack Career Path Platform Powered by Groq AI"
+publishedAt: "2026-04-14"
+summary: "A full-stack MERN platform that analyzes a user's skills and interests using Groq AI, then recommends personalized income paths and career directions with actionable roadmaps."
+images:
+  - "/images/projects/ai-skill-matcher/cover-1.png"
+  - "/images/projects/ai-skill-matcher/cover-2.png"
+  - "/images/projects/ai-skill-matcher/cover-3.png"
+  - "/images/projects/ai-skill-matcher/cover-4.png"
+  - "/images/projects/ai-skill-matcher/cover-5.png"
+team:
+  - name: "Deepak Keer"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/deepak-keer-1276a4361/"
+link: "https://skill-matcher-app.vercel.app/profile"
+---
+
+## Overview
+
+AI Skill Matcher is a full-stack web platform that helps users discover realistic career and income paths based on their natural skills, background, and interests. The platform uses Groq AI to analyze quiz responses and generate personalized career recommendations along with step-by-step roadmaps.
+
+The goal was to solve a real problem: most people don't know how to turn their existing skills into income, and generic career advice doesn't fit individual situations. AI Skill Matcher bridges that gap with a personalized, actionable, and AI-driven experience.
+
+---
+
+## Key Features
+
+- **AI Onboarding Quiz**
+  A multi-step quiz that collects information about the user's skills, interests, available time, and income goals — forming the input for AI analysis.
+
+- **AI Analysis Engine**
+  Groq AI processes quiz answers and returns three realistic, personalized income paths with difficulty ratings, income ranges, and required skills.
+
+- **Roadmap Generator**
+  For each career path, Groq generates a detailed step-by-step action plan with estimated timelines and learning resources.
+
+- **User Dashboard**
+  A personal workspace where users can save, view, and track their chosen career paths and roadmap progress.
+
+- **JWT Authentication**
+  Secure register, login, and logout flow with stateless JWT-based session management and bcrypt password hashing.
+
+- **Path Bookmarking & Progress Tracking**
+  Users can bookmark favorite paths and mark individual roadmap steps as complete, with visual progress indicators.
+
+---
+
+## Technologies Used
+
+- **React 18 + Vite (Frontend)**
+  For building a fast, component-based, and responsive user interface with modern hooks and great developer experience.
+
+- **Tailwind CSS + shadcn/ui**
+  Utility-first styling with a consistent, beautiful component library for rapid UI development.
+
+- **Zustand (State Management)**
+  Lightweight global state management for auth and quiz data — simpler than Redux, perfect for a mid-size application.
+
+- **Node.js + Express.js (Backend)**
+  Lightweight REST API layer for handling authentication, quiz submissions, AI calls, and data management.
+
+- **MongoDB + Mongoose (Database)**
+  Flexible schema design for storing users, quiz responses, AI-generated paths, and roadmaps with relational references.
+
+- **Groq AI API (AI)**
+  Used for skill analysis and roadmap generation via carefully engineered prompts that return structured JSON responses.
+
+- **JWT + bcryptjs (Authentication)**
+  Stateless, secure authentication with industry-standard password hashing.
+
+- **Zod + Joi (Validation)**
+  Type-safe validation on both the frontend (Zod) and backend (Joi) for end-to-end data integrity.
+
+---
+
+## Challenges and Learnings
+
+One of the primary challenges was designing reliable AI prompts that consistently return valid, parseable JSON from Groq. Handling edge cases in the AI response — such as markdown-wrapped JSON or unexpected formatting — required robust parsing and error handling in the service layer.
+
+Managing the relationships between MongoDB documents (User → QuizResponse → Path → Roadmap) while keeping queries efficient was another area of focus. Designing the schema upfront to support nested references made the API layer significantly cleaner.
+
+Implementing rate limiting specifically on the AI routes was critical to protect the Groq API quota, and required careful middleware configuration to enforce per-user limits without affecting other endpoints.
+
+This project deepened my understanding of AI API integration, prompt engineering, full-stack MERN architecture, and building scalable systems with real user flows.
+
+---
+
+## Outcome
+
+AI Skill Matcher demonstrates the ability to build an end-to-end AI-powered application — from quiz design and Groq integration to roadmap generation and a full user dashboard. It reflects practical experience in connecting frontend, backend, database, and AI services into a unified and user-centric product.
+
+The project is structured and documented to production-like standards, making it a strong portfolio piece that showcases both technical depth and product thinking.
+
+---
+
+This project highlights full-stack MERN development, AI API integration, prompt engineering, and the ability to design systems that turn user input into meaningful, personalized outcomes.

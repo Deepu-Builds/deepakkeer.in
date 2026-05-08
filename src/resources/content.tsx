@@ -84,14 +84,14 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">PagePulse</strong>
+        <strong className="ml-4">Personal Brand OS</strong>
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured Project
         </Text>
       </Row>
     ),
-    href: "/work/pagepulse",
+    href: "/work/personal-brand-os",
   },
 
   subline: (

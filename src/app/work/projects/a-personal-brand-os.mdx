@@ -1,0 +1,108 @@
+---
+title: "Personal Brand OS – All-in-One Dashboard for Content Creators"
+publishedAt: "2026-04-14"
+summary: "A full-stack MERN SaaS-style dashboard that centralizes content planning, idea management, posting schedules, performance analytics, and brand deal tracking for content creators."
+images:
+  - "/images/projects/personal-brand-os/cover-1.png"
+  - "/images/projects/personal-brand-os/cover-2.png"
+  - "/images/projects/personal-brand-os/cover-3.png"
+  - "/images/projects/personal-brand-os/cover-4.png"
+team:
+  - name: "Deepak Keer"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/deepak-keer-1276a4361/"
+link: "https://creaters-brand-os.vercel.app"
+---
+
+## Overview
+
+Personal Brand OS is an all-in-one dashboard built for content creators and personal brand builders. It replaces the chaos of juggling Notion, spreadsheets, social apps, and email by bringing content planning, idea management, posting schedules, performance tracking, and brand deal management into a single clean workspace.
+
+The platform is structured around five core modules — Content Calendar, Idea Board, Post Tracker, Analytics Dashboard, and Brand Deal CRM — giving creators a complete operating system for their personal brand.
+
+---
+
+## Key Features
+
+- **Content Calendar**
+  A visual weekly and monthly calendar powered by FullCalendar, showing all planned and scheduled posts across platforms in one place.
+
+- **Idea Board (Kanban)**
+  A drag-and-drop Kanban board built with dnd-kit for capturing and organizing content ideas across Backlog, In Progress, and Ready columns.
+
+- **Post Tracker**
+  Tracks every post through its full lifecycle — from idea and draft to review, scheduled, and published — with quick status updates via drag and drop.
+
+- **Analytics Dashboard**
+  A custom metrics dashboard built with Recharts displaying follower growth, engagement rates, views, and top-performing content over time.
+
+- **Brand Deal CRM**
+  A full CRM for managing brand partnerships, including deal type, status, payment tracking, deliverables, and deadlines — with a monthly income summary.
+
+- **AI Caption & Idea Generator**
+  Groq AI generates platform-specific captions from post titles and produces batches of content ideas based on the creator's niche and platform.
+
+- **Cloudinary Media Uploads**
+  Post thumbnails are uploaded and stored via Cloudinary using Multer as the Express middleware for multipart form handling.
+
+---
+
+## Technologies Used
+
+- **React 18 + Vite (Frontend)**
+  Fast, component-based UI with modern hooks and an efficient build pipeline.
+
+- **Tailwind CSS + shadcn/ui**
+  Rapid UI development with a consistent, accessible design system.
+
+- **dnd-kit (Drag & Drop)**
+  Modern, accessible drag-and-drop library for the Kanban idea board with optimistic UI updates.
+
+- **FullCalendar (React)**
+  Feature-rich calendar library with event management for the content scheduling view.
+
+- **Recharts (Charts)**
+  Composable, React-native chart library for building the analytics and growth visualization dashboard.
+
+- **Zustand (State Management)**
+  Simple global state for user data, post lists, and idea board state across the application.
+
+- **Node.js + Express.js (Backend)**
+  RESTful API with 25+ endpoints covering all five platform modules.
+
+- **MongoDB + Mongoose (Database)**
+  Flexible schema design for five core models: User, Post, Idea, Deal, and Analytics, with aggregation pipelines for income summaries.
+
+- **Groq AI API (AI)**
+  Integrated for AI caption generation and content idea suggestions, returning structured text and JSON via engineered prompts.
+
+- **Multer + Cloudinary (File Upload)**
+  Server-side file handling with cloud storage and delivery for post thumbnail images.
+
+- **JWT + bcryptjs (Authentication)**
+  Stateless, secure authentication with hashed passwords and protected API routes.
+
+---
+
+## Challenges and Learnings
+
+The most technically interesting challenge was implementing the Kanban drag-and-drop board with optimistic UI updates. The approach was to update Zustand state immediately on drop, call the PATCH API in the background, and roll back the local state if the request failed — giving instant UI response without waiting for the server.
+
+Building the Brand Deal CRM with MongoDB aggregation pipelines for income summaries required careful query design to group completed, paid deals by month and calculate totals accurately across different time ranges.
+
+Integrating Cloudinary for thumbnail uploads required coordinating Multer (for parsing multipart requests), Cloudinary's Node SDK (for upload), and storing the resulting URL in MongoDB — a multi-step flow that needed proper error handling at each stage.
+
+This project strengthened my understanding of multi-module SaaS architecture, real-time UI patterns, file upload pipelines, and building analytics features on top of NoSQL data.
+
+---
+
+## Outcome
+
+Personal Brand OS demonstrates the ability to design and build a complex, multi-feature SaaS-style product with five distinct modules, 25+ API endpoints, and five database models — all integrated into a single cohesive experience.
+
+It reflects strong product thinking alongside technical execution, particularly in areas like drag-and-drop UX, data visualization, AI integration, and media handling. The project is structured for real-world use and built to production-like standards.
+
+---
+
+This project highlights multi-module full-stack architecture, SaaS product design, AI integration, Kanban UX patterns, and the ability to build complex dashboards that solve real creator workflow problems.
